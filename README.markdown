@@ -48,7 +48,7 @@ So when the person has created 10 posts, then the user will not be given yet ano
 So we need to track that a user has done something. The user has executed a manuever.  
 To do this, we first need to get the player from the Battlefield:
 
-	var player = Battlefield.GetPlayer("MyUser");
+	var player = Battlefield.Current.GetPlayer("MyUser");
 
 This will give you a nice lille class, that executes stuff on "MyUser". Remmember that "MyUser" is a username-key - so it must never change! It is recommented to use the ID column in your user database for this.  
 Now we will just say this, just after the person has created his post:
