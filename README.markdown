@@ -31,7 +31,7 @@ Now is the time to look into what you are requiring the users to do, to get a me
 Things that a user must do, to get a medallion is called a manuever. A Manuever can be "Created a post", or "Visited the forum"
 A Medallion is then a requirement-set of manuevers that a user must do. You can have a medallion for "Created 10 posts". That medallion will then have a requirement on "10 x Created a Post"
 
-#### Add a Manuever
+### Add a Manuever
 Just under the line we added in the global.asax file:
 
 	Battlefield.Current.AddManeuver("created_post",10);
