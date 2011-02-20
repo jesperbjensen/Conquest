@@ -1,8 +1,8 @@
-﻿# Conquest
+﻿## Conquest
 A mini utility to track user achiements on your site  
 Conquest uses a very simple DB-schema. It uses a data-access tool called [Massive](https://github.com/robconery/massive) made by [Rob Conery](http://blog.wekeroad.com/).
 
-## Features
+### Features
 A very simple utilty to give achiements to your users, and by that way make the invest in your site, and think that its fun!
 
 * Tracks manuevers (actions), that you can define, and that you execute in your code.
@@ -11,12 +11,12 @@ A very simple utilty to give achiements to your users, and by that way make the 
 * Tracks points (EXP), that you can use to level up your user.
 * Gives you a easy way to get the new medallions that the user just got, so you can tell them!
 
-## Requirements
+### Requirements
 * .NET Framework 4
 * A application to use it in!
 * SQL Server (maybe it will work in other databases, but it's not tested)
 
-## How to install it?
+### How to install it?
 Conquest is just a single C# code file. 
 
 * Copy Conquest.cs and Massive.cs in your application.
@@ -25,12 +25,12 @@ Conquest is just a single C# code file.
 * Add the following code to your global.asax file (in Application_Start)
 	Battlefield.Current = new Battlefield("connectionstringname");
 
-## Setup
+### Setup
 Now is the time to look into what you are requiring the users to do, to get a medallion (achievement, badge etc.).  
 Things that a user must do, to get a medallion is called a manuever. A Manuever can be "Created a post", or "Visited the forum"
 A Medallion is then a requirement-set of manuevers that a user must do. You can have a medallion for "Created 10 posts". That medallion will then have a requirement on "10 x Created a Post"
 
-### Add a Manuever
+#### Add a Manuever
 Just under the line we added in the global.asax file:
 
 	Battlefield.Current.AddManeuver("created_post",10);
