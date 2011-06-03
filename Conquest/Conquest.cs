@@ -23,7 +23,7 @@ namespace Conquest
         private readonly Dictionary<string, dynamic> _maneuvers = new Dictionary<string, dynamic>();
         private readonly Dictionary<string, dynamic> _medallions = new Dictionary<string, dynamic>();
         private readonly Maneuvers _maneuversDb;
-        private readonly Medallions _medallionsDb = new Medallions();
+        private readonly Medallions _medallionsDb;
         private int[] _levels;
 
         public Battlefield(string connectionStringNameName)
