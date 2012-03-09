@@ -1,10 +1,10 @@
 ﻿Conquest
 ========
-A mini utility to track user achiements on your site  
+A mini utility to track user achievements on your site  
 Conquest uses a very simple DB-schema. It uses a data-access tool called [Massive](https://github.com/robconery/massive) made by [Rob Conery](http://blog.wekeroad.com/).
 
 ### Features
-A very simple utilty to give achiements to your users, and by that way make the invest in your site, and think that its fun!
+A very simple utilty to give achievements to your users, and by that way make the invest in your site, and think that its fun!
 
 * Tracks manuevers (actions), that you can define, and that you execute in your code.
 * Give the user Medallions (achievements, badges) - just just define what manuevers a medallion requires!
@@ -24,6 +24,7 @@ Conquest is just a single C# code file.
 * Execute the schema.sql script into the database that you wish to use.
 * Ensure that you have a connectionstring in your web.config file
 * Add the following code to your global.asax file (in Application_Start)
+
 	Battlefield.Current = new Battlefield("connectionstringname");
 
 ### Setup
