@@ -145,7 +145,14 @@ namespace Conquest
                 // We will now check if we are meeting all requirements
                 int requirement = condition.Value;
 
-                medalsToBeAwarded = Math.Min(medalsToBeAwarded,maneuvers[condition.Key]/requirement);
+                if(maneuvers.ContainsKey(condition.Key))
+                {
+                    medalsToBeAwarded = Math.Min(medalsToBeAwarded,maneuvers[condition.Key]/requirement);
+                }
+                else
+                {
+                    medalsToBeAwarded = 0;
+                }
             }
 
             int maxMedals = int.MaxValue;
