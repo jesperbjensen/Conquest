@@ -300,7 +300,7 @@ namespace Conquest
     {
         public Maneuvers(string connectionStringName) : base(connectionStringName) { }
 
-        public IList<dynamic> ByPlayer(string player)
+        public IEnumerable<dynamic> ByPlayer(string player)
         {
             return Query("SELECT SUM(Value) as Value, TypeKey FROM Maneuvers WHERE Player=@0 GROUP BY TypeKey", player);
         }
@@ -324,12 +324,12 @@ namespace Conquest
     {
         public Medallions(string connectionStringName) : base(connectionStringName) {}
 
-        public IList<dynamic> ByPlayer(string player)
+        public IEnumerable<dynamic> ByPlayer(string player)
         {
             return Query("SELECT * FROM Medallions WHERE Player=@0", player);
         }
 
-        public IList<dynamic> Overview(string player)
+        public IEnumerable<dynamic> Overview(string player)
         {
             return Query("SELECT TypeKey, Sum(Amount) as Amount FROM Medallions WHERE Player=@0 GROUP BY TypeKey", player);
         }
